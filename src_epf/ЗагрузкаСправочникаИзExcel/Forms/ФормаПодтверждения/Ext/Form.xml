@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Подтверждение расхождений</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Width>90</Width>
+	<Height>25</Height>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ПодписьЭлемент" id="1">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найдены отличия между файлом и базой по нескольким элементам. Отметьте, что применить:</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПодписьЭлементКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПодписьЭлементРасширеннаяПодсказка" id="3"/>
+		</LabelDecoration>
+		<Table name="Расхождения" id="4">
+			<DataPath>Расхождения</DataPath>
+			<Height>16</Height>
+			<ContextMenu name="РасхожденияКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="РасхожденияКоманднаяПанель" id="6"/>
+			<ExtendedTooltip name="РасхожденияРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="РасхожденияСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>Расхождения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасхожденияСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="РасхожденияСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РасхожденияСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>Расхождения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасхожденияСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="РасхожденияСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РасхожденияУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>Расхождения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РасхожденияУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="РасхожденияУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ОтметкаПрименить" id="17">
+					<DataPath>Расхождения.Применить</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Применить</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<TitleLocation>Right</TitleLocation>
+					<ContextMenu name="ОтметкаПрименитьКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ОтметкаПрименитьРасширеннаяПодсказка" id="19"/>
+				</CheckBoxField>
+				<InputField name="СтрокаФайла" id="20">
+					<DataPath>Расхождения.СтрокаФайла</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Строка</v8:content>
+						</v8:item>
+					</Title>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="СтрокаФайлаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СтрокаФайлаРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="Элемент" id="23">
+					<DataPath>Расхождения.Элемент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Элемент</v8:content>
+						</v8:item>
+					</Title>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ЭлементКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ЭлементРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="Представление" id="26">
+					<DataPath>Расхождения.Представление</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизит</v8:content>
+						</v8:item>
+					</Title>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ПредставлениеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПредставлениеРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ЗначениеВБазе" id="29">
+					<DataPath>Расхождения.ЗначениеВБазе</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В базе</v8:content>
+						</v8:item>
+					</Title>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ЗначениеВБазеКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ЗначениеВБазеРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ЗначениеВФайле" id="32">
+					<DataPath>Расхождения.ЗначениеВФайле</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В файле</v8:content>
+						</v8:item>
+					</Title>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ЗначениеВФайлеКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ЗначениеВФайлеРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаКнопок" id="35">
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="ГруппаКнопокРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<Button name="КнопкаПрименить" id="37">
+					<CommandName>Form.Command.ПрименитьВыбранные</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Применить отмеченное</v8:content>
+						</v8:item>
+					</Title>
+					<DefaultButton>true</DefaultButton>
+					<ExtendedTooltip name="КнопкаПрименитьРасширеннаяПодсказка" id="38"/>
+				</Button>
+				<Button name="КнопкаПропустить" id="39">
+					<CommandName>Form.Command.ПропуститьЭлемент</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не применять ничего</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КнопкаПропуститьРасширеннаяПодсказка" id="40"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Расхождения" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расхождения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="СтрокаФайла" id="42">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Элемент" id="43">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяРеквизита" id="44">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="45">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗначениеВБазе" id="46">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>300</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗначениеВФайле" id="47">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>300</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Применить" id="48">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПрименитьВыбранные" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить выбранные</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПрименитьВыбранныеВыполнить</Action>
+		</Command>
+		<Command name="ПропуститьЭлемент" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропустить элемент</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПропуститьЭлементВыполнить</Action>
+		</Command>
+	</Commands>
+</Form>
